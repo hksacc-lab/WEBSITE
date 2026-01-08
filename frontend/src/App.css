@@ -1300,6 +1300,14 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maps-container {
+    grid-template-columns: 1fr;
+  }
+
   .footer-top {
     grid-template-columns: repeat(2, 1fr);
   }
