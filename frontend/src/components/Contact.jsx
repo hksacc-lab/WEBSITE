@@ -7,7 +7,6 @@ import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 import { toast } from './ui/sonner';
 
 const Contact = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -29,10 +28,8 @@ const Contact = () => {
     
     // Frontend validation
     if (!formData.name || !formData.phone || !formData.email || !formData.message) {
-      toast({
-        title: 'Required Fields Missing',
+      toast.error('Required Fields Missing', {
         description: 'Please fill in all required fields.',
-        variant: 'destructive'
       });
       return;
     }
@@ -40,8 +37,7 @@ const Contact = () => {
     // Mock submission
     console.log('Form submitted:', formData);
     
-    toast({
-      title: 'Enquiry Sent Successfully!',
+    toast.success('Enquiry Sent Successfully!', {
       description: 'We will contact you shortly.',
     });
 
