@@ -26,7 +26,7 @@ const Services = () => {
         'Legal load compliance',
         'Timely deliveries'
       ],
-      image: 'https://images.pexels.com/photos/27627483/pexels-photo-27627483.jpeg?w=800&q=80'
+      image: '/truck-fleet.png'
     },
     {
       icon: Wrench,
