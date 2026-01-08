@@ -33,8 +33,21 @@ const About = () => {
             </p>
 
             <p className="about-description">
+              HKS Infra & Earthwork Sdn Bhd operates from our head office in Puchong, Selangor, while our machinery yard and fleet depot are strategically located in Kuantan, Pahang. This allows us to efficiently support projects across both Klang Valley and the East Coast region.
+            </p>
+
+            <p className="about-description">
               Our commitment to reliability, safety, and compliance with local regulations has made us a trusted partner for construction projects of all sizes. We understand the critical importance of timely delivery and quality execution in the construction industry.
             </p>
+
+            <div className="coverage-block">
+              <h3 className="coverage-title">Coverage Areas</h3>
+              <ul className="coverage-list">
+                <li>Klang Valley (Selangor & KL)</li>
+                <li>Kuantan, Pahang / Terengganu region</li>
+                <li>Other locations upon request</li>
+              </ul>
+            </div>
 
             <div className="about-features">
               <div className="feature-item">
