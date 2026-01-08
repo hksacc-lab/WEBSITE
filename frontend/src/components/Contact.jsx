@@ -4,7 +4,7 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
-import { useToast } from '../hooks/use-toast';
+import { toast } from './ui/sonner';
 
 const Contact = () => {
   const { toast } = useToast();
