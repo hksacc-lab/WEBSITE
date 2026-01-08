@@ -68,20 +68,6 @@ const Contact = () => {
             
             <div className="info-item">
               <div className="info-icon">
-                <MapPin className="h-6 w-6" />
-              </div>
-              <div className="info-text">
-                <p className="info-label">Address</p>
-                <p className="info-value">
-                  23, Jalan Tpk 1/1 & Sek-1,<br />
-                  Taman Perindustrian Kinrara,<br />
-                  47100 Puchong, Selangor
-                </p>
-              </div>
-            </div>
-
-            <div className="info-item">
-              <div className="info-icon">
                 <Phone className="h-6 w-6" />
               </div>
               <div className="info-text">
@@ -133,14 +119,6 @@ const Contact = () => {
                 </p>
               </div>
             </div>
-
-            <Button
-              onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=23+Jalan+Tpk+1%2F1+Taman+Perindustrian+Kinrara+47100+Puchong+Selangor', '_blank')}
-              className="btn-maps"
-            >
-              <MapPin className="h-5 w-5" />
-              View on Google Maps
-            </Button>
           </div>
 
           <div className="contact-form-container">
@@ -216,17 +194,99 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4095819999997!2d101.6299!3d3.0234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c1f7f7f7f7f%3A0x7f7f7f7f7f7f7f7f!2s23%2C%20Jalan%20Tpk%201%2F1%2C%20Taman%20Perindustrian%20Kinrara%2C%2047100%20Puchong%2C%20Selangor!5e0!3m2!1sen!2smy!4v1234567890!5m2!1sen!2smy"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="HKS Location Map"
-          />
+        {/* Our Locations Section */}
+        <div className="locations-section">
+          <h3 className="locations-title">Our Locations</h3>
+          
+          <div className="locations-grid">
+            {/* Head Office - Puchong */}
+            <div className="location-card">
+              <div className="location-header">
+                <MapPin className="location-icon" />
+                <h4 className="location-name">Head Office – Puchong</h4>
+              </div>
+              <div className="location-details">
+                <p className="location-company">HKS Infra & Earthwork Sdn Bhd</p>
+                <p className="location-address">
+                  23, Jalan Tpk 1/1 & Sek-1,<br />
+                  Taman Perindustrian Kinrara,<br />
+                  47100 Puchong, Selangor
+                </p>
+                <div className="location-contact">
+                  <p><strong>Phone:</strong> <a href="tel:+60380757915">03-8075 7915</a></p>
+                  <p><strong>Email:</strong> <a href="mailto:info@hks-my.com">info@hks-my.com</a></p>
+                </div>
+              </div>
+              <Button
+                onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=23+Jalan+Tpk+1%2F1+Taman+Perindustrian+Kinrara+47100+Puchong+Selangor', '_blank')}
+                className="btn-location-map"
+              >
+                <MapPin className="h-4 w-4" />
+                View on Google Maps
+              </Button>
+            </div>
+
+            {/* Machinery Yard - Kuantan */}
+            <div className="location-card">
+              <div className="location-header">
+                <MapPin className="location-icon" />
+                <h4 className="location-name">Machinery Yard – Kuantan</h4>
+              </div>
+              <div className="location-details">
+                <p className="location-company">HKS Machinery Yard</p>
+                <p className="location-address">
+                  LOT 15108A, Jalan Kuantan Port By Pass,<br />
+                  Kampung Sungai Karang,<br />
+                  26100 Kuantan, Pahang
+                </p>
+                <div className="location-contact">
+                  <p><strong>Operations:</strong> Fleet & Equipment Depot</p>
+                </div>
+              </div>
+              <Button
+                onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=LOT+15108A+Jalan+Kuantan+Port+By+Pass+Kampung+Sungai+Karang+26100+Kuantan+Pahang', '_blank')}
+                className="btn-location-map"
+              >
+                <MapPin className="h-4 w-4" />
+                View on Google Maps
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Maps Section */}
+        <div className="maps-container">
+          <div className="map-wrapper">
+            <h4 className="map-title">Head Office - Puchong</h4>
+            <div className="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4095819999997!2d101.6299!3d3.0234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c1f7f7f7f7f%3A0x7f7f7f7f7f7f7f7f!2s23%2C%20Jalan%20Tpk%201%2F1%2C%20Taman%20Perindustrian%20Kinrara%2C%2047100%20Puchong%2C%20Selangor!5e0!3m2!1sen!2smy!4v1234567890!5m2!1sen!2smy"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="HKS Head Office Location"
+              />
+            </div>
+          </div>
+
+          <div className="map-wrapper">
+            <h4 className="map-title">Machinery Yard - Kuantan</h4>
+            <div className="map-frame">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.123!2d103.3567!3d3.8167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31c8bb7f7f7f7f7f%3A0x7f7f7f7f7f7f7f7f!2sLOT%2015108A%2C%20Jalan%20Kuantan%20Port%20By%20Pass%2C%20Kampung%20Sungai%20Karang%2C%2026100%20Kuantan%2C%20Pahang!5e0!3m2!1sen!2smy!4v1234567890!5m2!1sen!2smy"
+                width="100%"
+                height="350"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="HKS Machinery Yard Location"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
